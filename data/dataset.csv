@@ -1,0 +1,101 @@
+pregunta,intencion
+¿Qué es un proceso en un sistema operativo?,procesos
+¿Qué diferencia hay entre un programa y un proceso?,procesos
+¿Cuáles son los estados de un proceso?,procesos
+¿Qué significa que un proceso esté listo?,procesos
+¿Cuándo pasa un proceso al estado ejecutando?,procesos
+¿Por qué un proceso puede quedar esperando?,procesos
+¿Qué ocurre cuando un proceso termina?,procesos
+¿Cómo crea el sistema operativo un proceso nuevo?,procesos
+¿Qué información guarda el bloque de control de proceso?,procesos
+¿Para qué sirve el PCB de un proceso?,procesos
+¿Qué es un cambio de contexto entre procesos?,procesos
+¿Por qué el procesador cambia de un proceso a otro?,procesos
+¿Qué función cumple el planificador de procesos?,procesos
+¿Cómo se decide qué proceso usa la CPU?,procesos
+¿Qué pasa con el proceso cuando solicita una operación de entrada y salida?,procesos
+¿Un proceso puede tener varios hilos de ejecución?,procesos
+¿Qué recursos necesita un proceso para ejecutarse?,procesos
+¿Qué significa suspender un proceso?,procesos
+¿Cómo vuelve a listo un proceso que estaba esperando?,procesos
+¿Qué diferencia hay entre proceso activo y proceso bloqueado?,procesos
+¿Qué es la memoria RAM?,memoria
+¿Para qué sirve la memoria principal de una computadora?,memoria
+¿Qué guarda temporalmente la RAM mientras uso un programa?,memoria
+¿Qué pasa con los datos de la RAM cuando apago la computadora?,memoria
+¿Cómo asigna memoria el sistema operativo a un proceso?,memoria
+¿Qué significa liberar memoria?,memoria
+¿Cómo puedo calcular cuánta memoria queda disponible?,memoria
+¿Qué es la memoria virtual?,memoria
+¿En qué se diferencian la RAM y el almacenamiento del disco?,memoria
+¿Qué es una página de memoria?,memoria
+¿Para qué sirve la paginación de memoria?,memoria
+¿Qué significa que haya fragmentación en la memoria?,memoria
+¿Qué ocurre si los programas piden más RAM de la disponible?,memoria
+¿Qué es un marco de página?,memoria
+¿Cómo se divide la memoria en bloques?,memoria
+¿Qué significa memoria ocupada y memoria libre?,memoria
+¿Por qué una aplicación consume memoria RAM?,memoria
+¿Qué es una dirección de memoria?,memoria
+¿Cómo evita el sistema que un proceso use memoria de otro?,memoria
+¿Qué relación existe entre memoria física y memoria virtual?,memoria
+¿Qué es el kernel?,kernel
+¿Qué otro nombre recibe el núcleo del sistema operativo?,kernel
+¿Cuál es la función principal del kernel?,kernel
+¿Cómo se comunica el kernel con el hardware?,kernel
+¿Qué componente administra los recursos de la computadora?,kernel
+¿El kernel controla el acceso a la CPU?,kernel
+¿Qué hace el núcleo cuando un programa solicita un servicio?,kernel
+¿Qué es una llamada al sistema?,kernel
+¿Cómo solicita una aplicación una operación al sistema operativo?,kernel
+¿Qué parte del sistema operativo administra los dispositivos?,kernel
+¿Quién controla el acceso a los periféricos?,kernel
+¿Qué función tiene el kernel en la gestión de memoria?,kernel
+¿El núcleo se ejecuta en modo privilegiado?,kernel
+¿Qué diferencia hay entre modo usuario y modo kernel?,kernel
+¿Qué protege el kernel frente a errores de las aplicaciones?,kernel
+¿Cómo interviene el kernel cuando ocurre una interrupción?,kernel
+¿Qué es un controlador de dispositivo y cómo se relaciona con el kernel?,kernel
+¿El kernel forma parte del sistema operativo?,kernel
+¿Qué papel cumple el núcleo al iniciar el sistema?,kernel
+¿Puede una aplicación acceder directamente a todo el hardware?,kernel
+¿Qué muestra el comando pwd en Linux?,comandos
+¿Para qué sirve ls en la terminal?,comandos
+¿Cómo veo los elementos del directorio actual?,comandos
+¿Qué comando muestra la ruta en la que estoy?,comandos
+¿Cómo cambio a otra carpeta usando la terminal?,comandos
+¿Qué hace el comando cd ..?,comandos
+¿Cómo regreso al directorio personal desde la consola?,comandos
+¿Qué opción de ls muestra archivos ocultos?,comandos
+¿Cómo limpio la pantalla de la terminal?,comandos
+¿Qué hace el comando whoami?,comandos
+¿Cómo consulto la fecha desde Linux?,comandos
+¿Qué comando permite ver el manual de otra instrucción?,comandos
+¿Para qué sirve man en Linux?,comandos
+¿Cómo puedo conocer el espacio disponible en disco desde la terminal?,comandos
+¿Qué comando muestra los procesos activos?,comandos
+¿Cómo consulto el historial de comandos?,comandos
+¿Qué hace la instrucción echo en la terminal?,comandos
+¿Cómo averiguo la versión del sistema Linux?,comandos
+¿Qué comando sirve para buscar texto en archivos?,comandos
+¿Cómo ejecuto una instrucción anterior de nuevo?,comandos
+¿Cómo creo una carpeta nueva en Linux?,archivos
+¿Qué comando crea un directorio?,archivos
+¿Cómo hago un archivo vacío desde la terminal?,archivos
+¿Qué hace touch cuando indico un nombre de archivo?,archivos
+¿Cómo copio un archivo a otra carpeta?,archivos
+¿Qué comando mueve un archivo a otro directorio?,archivos
+¿Cómo cambio el nombre de un archivo desde Linux?,archivos
+¿Cómo elimino un archivo usando la consola?,archivos
+¿Qué comando borra un directorio vacío?,archivos
+¿Cómo puedo eliminar una carpeta con su contenido?,archivos
+¿Cómo creo una carpeta llamada tareas desde la consola?,archivos
+¿Cómo copio una carpeta completa en Linux?,archivos
+¿Qué comando permite ver los permisos de un archivo?,archivos
+¿Cómo cambio los permisos de lectura de un archivo?,archivos
+¿Cómo cambio el propietario de un archivo?,archivos
+¿Qué instrucción sirve para comprimir archivos?,archivos
+¿Cómo extraigo el contenido de un archivo comprimido?,archivos
+¿Cómo guardo la salida de un comando en un archivo?,archivos
+¿Qué diferencia hay entre una ruta absoluta y una relativa?,archivos
+¿Cómo organizo documentos dentro de carpetas en Linux?,archivos

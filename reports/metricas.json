@@ -1,0 +1,74 @@
+{
+  "generado_utc": "2026-11-26T17:48:29.642816+00:00",
+  "dataset": "data\\dataset.csv",
+  "total_ejemplos": 100,
+  "ejemplos_entrenamiento": 80,
+  "ejemplos_prueba": 20,
+  "semilla": 42,
+  "proporcion_prueba": 0.2,
+  "intenciones": [
+    "archivos",
+    "comandos",
+    "kernel",
+    "memoria",
+    "procesos"
+  ],
+  "ejemplos_por_intencion": {
+    "archivos": 20,
+    "comandos": 20,
+    "kernel": 20,
+    "memoria": 20,
+    "procesos": 20
+  },
+  "accuracy": 0.75,
+  "precision_macro": 0.8,
+  "recall_macro": 0.75,
+  "f1_macro": 0.7492063492063491,
+  "reporte_por_intencion": {
+    "archivos": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 4.0
+    },
+    "comandos": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1-score": 0.6666666666666666,
+      "support": 4.0
+    },
+    "kernel": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1-score": 0.6666666666666666,
+      "support": 4.0
+    },
+    "memoria": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1-score": 0.8571428571428571,
+      "support": 4.0
+    },
+    "procesos": {
+      "precision": 0.6,
+      "recall": 0.75,
+      "f1-score": 0.6666666666666666,
+      "support": 4.0
+    },
+    "accuracy": 0.75,
+    "macro avg": {
+      "precision": 0.8,
+      "recall": 0.75,
+      "f1-score": 0.7492063492063491,
+      "support": 20.0
+    },
+    "weighted avg": {
+      "precision": 0.8,
+      "recall": 0.75,
+      "f1-score": 0.7492063492063491,
+      "support": 20.0
+    }
+  },
+  "modelo": "models\\modelo_nlp.joblib",
+  "nota": "Métricas calculadas sobre el conjunto de prueba separado; no son resultados de validación externa."
+}
