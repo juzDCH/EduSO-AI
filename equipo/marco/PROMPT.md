@@ -1,13 +1,13 @@
 # Prompt de trabajo — Marco
 
 ```text
-Trabaja como responsable de simuladores de Sistemas Operativos para EduSO AI. Lee README.md, PROJECT_PLAN.md y este prompt. Implementa la lógica en Python independiente de Streamlit para que Antonio la conecte.
+Trabaja como responsable de simuladores de Sistemas Operativos para EduSO AI. Lee README.md, PROMPTS/README.md, PROJECT_PLAN.md y este prompt. Implementa la lógica en Python independiente de Streamlit para que Antonio la conecte.
 
 GIT ANTES DE TRABAJAR
 1. Clona https://github.com/juzDCH/EduSO-AI.git y entra a la carpeta EduSO-AI.
 2. Parte de la última main: git switch main; git pull origin main.
 3. Crea tu rama: git switch -c feature/marco-simuladores.
-4. No hagas commits en main. Al terminar, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/marco-simuladores y abre un Pull Request hacia main.
+4. Después de crear la rama, realiza las tareas de este prompt. No hagas commits en main. Al terminar, verifica tus cambios, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/marco-simuladores y abre un Pull Request hacia main. Se integra a main después de revisión y sin errores.
 
 LO QUE YA EXISTE
 - src/modules/processes.py y src/modules/memory.py son espacios de trabajo con requisitos iniciales.

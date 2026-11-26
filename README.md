@@ -2,6 +2,8 @@
 
 Plataforma educativa para aprender Sistemas Operativos con un tutor, simulaciones y retos. La base incluye una primera app funcional y deja puntos de extensión claros para que el equipo complete y mejore cada módulo.
 
+> **Equipo:** empieza por [PROMPTS/README.md](PROMPTS/README.md) para ver qué ya está hecho, qué le falta a cada integrante y cómo trabajar en su propia rama.
+
 ## Repartición del equipo
 
 | Integrante | Parte | Entrega principal | Archivos asignados |
@@ -47,6 +49,7 @@ EduSO-AI/
 │   ├── nicol/PROMPT.md
 │   └── edwin/PROMPT.md
 ├── docs/                           # documentación final coordinada por Edwin
+├── PROMPTS/README.md               # entrada rápida: tareas, estado y ramas
 ├── ESTADO_PROYECTO.md              # avance actual, entregado y pendiente
 ├── PROJECT_PLAN.md
 ├── requirements.txt
@@ -98,5 +101,7 @@ El plan del curso pide integrar unidades U1–U5. Hay que contrastar procesos y 
 ## Guía del equipo
 
 Cada carpeta de `equipo/` tiene un `PROMPT.md` listo para copiar en el asistente de código. Incluye el estado actual, tareas pendientes, archivos y criterios de entrega. El reparto y los criterios técnicos están en [PROJECT_PLAN.md](PROJECT_PLAN.md); el tablero de avance está en [ESTADO_PROYECTO.md](ESTADO_PROYECTO.md).
+
+El índice más directo para el equipo es [PROMPTS/README.md](PROMPTS/README.md): resume el avance real de las cinco partes y enlaza cada prompt.
 
 El flujo de ramas para que cada integrante parta de `main`, trabaje en su rama y proponga su integración está en [CONTRIBUTING.md](CONTRIBUTING.md).

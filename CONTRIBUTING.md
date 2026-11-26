@@ -4,7 +4,7 @@ Repositorio: https://github.com/juzDCH/EduSO-AI
 
 ## Empezar una parte
 
-Cada integrante parte de la última versión de `main` y crea su propia rama. Ejecuta los comandos desde una terminal con Git instalado:
+Después de clonar, lee el README raíz y [PROMPTS/README.md](PROMPTS/README.md); allí están el estado de cada entrega y los enlaces a los prompts detallados. Ejecuta los comandos desde una terminal con Git instalado:
 
 ```powershell
 git clone https://github.com/juzDCH/EduSO-AI.git
@@ -14,7 +14,7 @@ git pull origin main
 git switch -c <rama-asignada>
 ```
 
-Si ya clonaste el proyecto, entra a su carpeta y ejecuta `git switch main`, `git pull origin main` y luego crea tu rama asignada. No trabajes directamente sobre `main`.
+El orden es: bajar la última `main`, leer el prompt, crear tu rama asignada y realizar las tareas del prompt. Si ya clonaste el proyecto, entra a su carpeta, actualiza `main` y crea tu rama. No trabajes directamente sobre `main`.
 
 ## Ramas asignadas
 

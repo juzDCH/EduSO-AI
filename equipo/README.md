@@ -2,6 +2,8 @@
 
 Cada integrante tiene un prompt listo para iniciar su parte. Lee primero `../README.md` y `../PROJECT_PLAN.md`; después copia tu prompt en el asistente de código con la carpeta del proyecto abierta.
 
+La guía visible para todos es `../PROMPTS/README.md`: muestra qué ya existe, qué falta y cómo crear la rama antes de empezar.
+
 | Integrante | Prompt | Estado inicial |
 | --- | --- | --- |
 | Dante | [PROMPT.md](dante/PROMPT.md) | Backend del tutor implementado; revisión y mejora de datos/modelo pendientes |

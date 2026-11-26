@@ -70,7 +70,7 @@ Este documento deja alcance, archivos, contrato de integración y criterios de t
 
 ## Prompts de trabajo
 
-Las instrucciones de inicio para cada integrante están en `equipo/<nombre>/PROMPT.md`. Cada prompt indica qué existe, qué falta, qué archivos tocar y cómo entregar el trabajo.
+Las instrucciones de inicio para cada integrante están en `equipo/<nombre>/PROMPT.md`. El índice para el equipo es `PROMPTS/README.md`: muestra lo hecho, lo pendiente, el nombre de cada rama y los pasos para abrir un Pull Request a `main`.
 
 ## Trabajo con GitHub
 

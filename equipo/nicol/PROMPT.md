@@ -1,13 +1,13 @@
 # Prompt de trabajo — Nicol
 
 ```text
-Trabaja como responsable de la terminal educativa, los retos y el contenido didáctico de EduSO AI. Lee README.md, PROJECT_PLAN.md y este prompt. Mantén la lógica en src/modules/ para que Antonio pueda conectarla.
+Trabaja como responsable de la terminal educativa, los retos y el contenido didáctico de EduSO AI. Lee README.md, PROMPTS/README.md, PROJECT_PLAN.md y este prompt. Mantén la lógica en src/modules/ para que Antonio pueda conectarla.
 
 GIT ANTES DE TRABAJAR
 1. Clona https://github.com/juzDCH/EduSO-AI.git y entra a la carpeta EduSO-AI.
 2. Parte de la última main: git switch main; git pull origin main.
 3. Crea tu rama: git switch -c feature/nicol-terminal-retos.
-4. No hagas commits en main. Al terminar, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/nicol-terminal-retos y abre un Pull Request hacia main.
+4. Después de crear la rama, realiza las tareas de este prompt. No hagas commits en main. Al terminar, verifica tus cambios, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/nicol-terminal-retos y abre un Pull Request hacia main. Se integra a main después de revisión y sin errores.
 
 LO QUE YA EXISTE
 - src/modules/terminal.py y src/modules/quizzes.py son espacios de trabajo.

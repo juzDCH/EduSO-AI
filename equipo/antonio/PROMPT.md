@@ -1,13 +1,13 @@
 # Prompt de trabajo — Antonio
 
 ```text
-Trabaja como responsable del frontend de EduSO AI. Lee README.md, PROJECT_PLAN.md y este prompt antes de editar. Conserva la lógica educativa en src/ y usa la app actual como punto de partida.
+Trabaja como responsable del frontend de EduSO AI. Lee README.md, PROMPTS/README.md, PROJECT_PLAN.md y este prompt antes de editar. Conserva la lógica educativa en src/ y usa la app actual como punto de partida.
 
 GIT ANTES DE TRABAJAR
 1. Clona https://github.com/juzDCH/EduSO-AI.git y entra a la carpeta EduSO-AI.
 2. Parte de la última main: git switch main; git pull origin main.
 3. Crea tu rama: git switch -c feature/antonio-frontend.
-4. No hagas commits en main. Al terminar, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/antonio-frontend y abre un Pull Request hacia main.
+4. Después de crear la rama, realiza las tareas de este prompt. No hagas commits en main. Al terminar, verifica tus cambios, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/antonio-frontend y abre un Pull Request hacia main. Se integra a main después de revisión y sin errores.
 
 LO QUE YA EXISTE
 - app.py es una app Streamlit mínima con Inicio y Tutor IA.
