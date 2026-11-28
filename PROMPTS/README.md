@@ -1,28 +1,32 @@
 # PROMPTS — tareas y flujo del equipo
 
-Lee este archivo después de clonar el repositorio. Aquí se indica qué ya existe, qué falta y dónde está el prompt detallado de cada integrante.
+Lee este archivo después de clonar el repositorio. Aquí está qué ya existe, qué falta y el prompt de cada integrante. **Cada uno trabaja en su rama y abre su Pull Request a `main`.**
 
-## Estado de las entregas
+## Estado de las entregas (27/11/2026)
 
-| Integrante | Entrega | Ya existe | Falta para terminar | Estado |
+| Integrante | Entrega | Ya existe | Falta | Estado |
 | --- | --- | --- | --- | --- |
-| **Dante** | IA y servicio del tutor | Dataset inicial de 100 preguntas, preprocesamiento, clasificador TF-IDF + Regresión Logística, modelo guardado, base didáctica y servicio conectado. La línea base es accuracy 0.75 en 20 preguntas de prueba. | Revisar etiquetas con el programa, ampliar/variar datos, revisar métricas por clase y ajustar el umbral de confianza con ejemplos reales. | **Base hecha; mejoras pendientes.** |
-| **Antonio** | Frontend Streamlit | App inicial con Inicio, Tutor IA y tarjetas de estado conectada al servicio de Dante. | Mejorar diseño y navegación, separar páginas e integrar cada módulo cuando Marco y Nicol los terminen. | **MVP hecho; frontend final pendiente.** |
-| **Marco** | Procesos y memoria RAM | Archivos de trabajo, requisitos y contrato común `ResultadoOperacion`. | Implementar transiciones de procesos e historial; memoria ficticia de 100 MB con asignación/liberación y errores claros. | **Implementación pendiente.** |
-| **Nicol** | Terminal y evaluación | Archivos de trabajo, requisitos y contrato común `ResultadoOperacion`. | Implementar terminal con archivos ficticios en memoria; banco de preguntas, puntaje y retroalimentación. | **Implementación pendiente.** |
-| **Edwin** | Integración y entrega | Reparto, tablero y documentos iniciales para orientar la entrega. | Coordinar integración, revisar instalación/flujo completo, confirmar U1–U5 con el programa oficial, documentar validación real y preparar demo. | **Integración y entrega pendientes.** |
+| **Dante** | IA y servicio del tutor | Dataset de 300 preguntas + 60 de rechazo, preprocesamiento, modelo TF-IDF + Regresión Logística, umbral 0.35, servicio, 17 pruebas y `docs/MODELO.md`. | Confirmar U1–U5; ampliar con preguntas reales; revisar confusiones. | **Base cerrada** |
+| **Antonio** | Frontend Streamlit | Inicio, cinco temas, exploración, paso al tutor, estados de módulos y AppTest. | Integrar procesos, memoria, terminal y retos; diseño y páginas. | **Base lista** |
+| **Marco** | Procesos y memoria RAM | Contrato `ResultadoOperacion`; catálogo en “En desarrollo”. | Simuladores, pruebas, `listo=True`. | **Pendiente** |
+| **Nicol** | Terminal y retos | Contrato `ResultadoOperacion`; catálogo en “En desarrollo”. | Terminal ficticia, retos, puntaje, pruebas. | **Pendiente** |
+| **Edwin** | Integración y entrega | Documentación técnica base y comandos. | Instalación limpia, demo, validación, U1–U5, revisión de PR. | **Pendiente** |
 
-Los prompts detallados están aquí:
+**Avance del proyecto: ~40 %.** El 60 % restante es exactamente lo de la columna “Falta”.
 
-- [Dante — IA y tutor](../equipo/dante/PROMPT.md)
-- [Antonio — frontend](../equipo/antonio/PROMPT.md)
-- [Marco — simuladores](../equipo/marco/PROMPT.md)
-- [Nicol — terminal y retos](../equipo/nicol/PROMPT.md)
-- [Edwin — integración y entrega](../equipo/edwin/PROMPT.md)
+## Entrada por integrante
 
-## Cómo trabaja cada integrante
+| Integrante | Qué hacer | Guía | Prompt |
+| --- | --- | --- | --- |
+| Dante | Revisar y mejorar datos/modelo | [README](../equipo/dante/README.md) | [PROMPT](../equipo/dante/PROMPT.md) |
+| Antonio | Integrar módulos y pulir UI | [README](../equipo/antonio/README.md) | [PROMPT](../equipo/antonio/PROMPT.md) |
+| Marco | Procesos y memoria | [README](../equipo/marco/README.md) | [PROMPT](../equipo/marco/PROMPT.md) |
+| Nicol | Terminal y retos | [README](../equipo/nicol/README.md) | [PROMPT](../equipo/nicol/PROMPT.md) |
+| Edwin | Integración y validación | [README](../equipo/edwin/README.md) | [PROMPT](../equipo/edwin/PROMPT.md) |
 
-Cada persona debe partir de la última versión de `main`, leer su prompt, crear su rama asignada y trabajar en ella. No se trabaja directamente sobre `main`.
+Cada README incluye el checklist, el contrato, los comandos de verificación y una versión corta del prompt.
+
+## Cómo trabajar
 
 ### 1. Clonar y actualizar `main`
 
@@ -33,11 +37,13 @@ git switch main
 git pull origin main
 ```
 
-### 2. Leer el prompt y crear la rama propia
+### 2. Crear la rama propia
 
-Lee primero el README raíz y el prompt enlazado arriba. Después crea la rama que corresponde a tu integrante:
+```powershell
+git switch -c feature/<tu-nombre>-<tu-parte>
+```
 
-| Integrante | Rama que debe crear |
+| Integrante | Rama |
 | --- | --- |
 | Dante | `feature/dante-ia` |
 | Antonio | `feature/antonio-frontend` |
@@ -45,30 +51,39 @@ Lee primero el README raíz y el prompt enlazado arriba. Después crea la rama q
 | Nicol | `feature/nicol-terminal-retos` |
 | Edwin | `feature/edwin-integracion` |
 
-Ejemplo para Dante:
+### 3. Trabajar con tu IA y verificar
+
+Copia el `PROMPT.md` de tu carpeta. Antes de publicar:
 
 ```powershell
-git switch -c feature/dante-ia
+python -m src.train
+python -m unittest discover -s tests -v
 ```
 
-### 3. Hacer y publicar la parte
+Si tocaste la app: `streamlit run app.py` y recorre el flujo.
 
-Sigue las tareas y criterios de tu prompt. Al terminar, verifica los cambios, crea un commit en tu rama y súbela:
+### 4. Publicar y abrir Pull Request
 
 ```powershell
-git status
 git add <archivos-de-tu-parte>
 git commit -m "feat: describe el cambio"
-git push -u origin <rama-asignada>
+git push -u origin feature/<tu-nombre>-<tu-parte>
 ```
 
-Luego abre un **Pull Request desde tu rama hacia `main`**. Edwin coordina la revisión. La integración a `main` se hace después de revisar que el cambio corresponda al prompt, que no haya conflictos y que las verificaciones pertinentes no muestren errores. No se suben commits directamente a `main`.
+Abre un **Pull Request a `main`**. Edwin coordina la revisión. No se integra nada con conflictos ni con módulos que figuren listos sin estarlo.
 
-## Pendientes comunes del proyecto
+## Reglas que no se rompen
 
-- Confirmar unidades U1–U5 con el programa oficial; no inventar la correspondencia.
-- Completar y conectar procesos, memoria, terminal y evaluación.
-- Revisar la línea base NLP: usa solo 20 preguntas de prueba y aún no es validación externa.
-- Ejecutar y revisar la app integrada; todavía no hay una suite automática de pruebas.
-- Validar con un estudiante con autorización y registrar observaciones reales.
-- Preparar documentación final y demo de cinco minutos.
+- No hacer commits directos a `main`.
+- No marcar `listo=True` en `src/modules/catalog.py` sin implementar y probar el módulo.
+- No duplicar lógica del backend dentro de Streamlit.
+- No inventar métricas, testimonios, unidades curriculares ni resultados de validación.
+- Mantener el contrato `ServicioTutor`, `ResultadoOperacion` y `listar_modulos()`.
+
+## Referencias
+
+- Rúbrica revisada: [`docs/RUBRICA.md`](../docs/RUBRICA.md)
+- Modelo: [`docs/MODELO.md`](../docs/MODELO.md)
+- Arquitectura y contratos: [`docs/ARQUITECTURA.md`](../docs/ARQUITECTURA.md)
+- Unidades (tentativo): [`docs/UNIDADES.md`](../docs/UNIDADES.md)
+- Estado general: [`ESTADO_PROYECTO.md`](../ESTADO_PROYECTO.md)

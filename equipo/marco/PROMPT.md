@@ -14,6 +14,8 @@ LO QUE YA EXISTE
 - src/modules/contracts.py define ResultadoOperacion(ok, mensaje, datos), con a_dict(), exito() y error().
 - src/modules/catalog.py muestra ambos módulos como listos=False.
 - app.py presenta el estado de cada módulo.
+- Hay 17 pruebas automáticas y documentación de la rúbrica y la arquitectura en docs/RUBRICA.md y docs/ARQUITECTURA.md.
+- El criterio de rúbrica que más ayudas a ganar es Integración de unidades (20 pts); la interfaz y la innovación dependen de que estos módulos existan.
 
 TU PARTE: PROCESOS
 1. Implementa creación, consulta y transiciones válidas: Nuevo→Listo; Listo→Ejecutando; Ejecutando→Esperando, Terminado o Listo; Esperando→Listo.

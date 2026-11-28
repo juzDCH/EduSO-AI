@@ -13,7 +13,9 @@ LO QUE YA EXISTE
 - src/modules/terminal.py y src/modules/quizzes.py son espacios de trabajo.
 - src/modules/contracts.py define ResultadoOperacion(ok, mensaje, datos), serializable con a_dict().
 - src/modules/catalog.py presenta Terminal y Retos como listos=False.
-- data/dataset.csv y src/knowledge_base.py contienen las cinco intenciones actuales.
+- data/dataset.csv (300 preguntas), data/ejemplos_fuera_de_tema.csv (60 de rechazo) y src/knowledge_base.py contienen los cinco temas actuales.
+- Hay 17 pruebas automáticas y documentación de la rúbrica y la arquitectura en docs/RUBRICA.md y docs/ARQUITECTURA.md.
+- El criterio de rúbrica que más ayudas a ganar es Integración de unidades (20 pts) e Innovación (5 pts).
 
 TU PARTE: TERMINAL SIMULADA
 1. Mantén un árbol de archivos/directorios ficticio en memoria, con una ruta actual por sesión.

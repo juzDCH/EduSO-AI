@@ -28,7 +28,15 @@ El orden es: bajar la última `main`, leer el prompt, crear tu rama asignada y r
 
 ## Guardar y compartir el trabajo
 
-Antes de publicar, revisa `git status` y agrega solo los archivos de tu parte. Luego:
+Antes de publicar, revisa `git status` y agrega solo los archivos de tu parte. Ejecuta las verificaciones que correspondan:
+
+```powershell
+python -m src.train
+python -m unittest discover -s tests -v
+streamlit run app.py
+```
+
+Luego:
 
 ```powershell
 git add <archivos-de-tu-parte>

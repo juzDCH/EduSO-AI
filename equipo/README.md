@@ -1,14 +1,13 @@
 # Carpeta del equipo
 
-Cada integrante tiene un prompt listo para iniciar su parte. Lee primero `../README.md` y `../PROJECT_PLAN.md`; después copia tu prompt en el asistente de código con la carpeta del proyecto abierta.
+Cada integrante tiene una guía corta (`README.md`) y un prompt listo (`PROMPT.md`) para iniciar su parte. Lee primero `../README.md`, `../PROMPTS/README.md` y `../docs/RUBRICA.md`; después copia tu prompt en el asistente de código con la carpeta del proyecto abierta.
 
-La guía visible para todos es `../PROMPTS/README.md`: muestra qué ya existe, qué falta y cómo crear la rama antes de empezar.
+| Integrante | Guía | Prompt | Estado |
+| --- | --- | --- | --- |
+| Dante | [README](dante/README.md) | [PROMPT](dante/PROMPT.md) | Base cerrada; mejoras opcionales |
+| Antonio | [README](antonio/README.md) | [PROMPT](antonio/PROMPT.md) | Frontend base listo; integración pendiente |
+| Marco | [README](marco/README.md) | [PROMPT](marco/PROMPT.md) | Simuladores pendientes |
+| Nicol | [README](nicol/README.md) | [PROMPT](nicol/PROMPT.md) | Terminal y retos pendientes |
+| Edwin | [README](edwin/README.md) | [PROMPT](edwin/PROMPT.md) | Integración y validación pendientes |
 
-| Integrante | Prompt | Estado inicial |
-| --- | --- | --- |
-| Dante | [PROMPT.md](dante/PROMPT.md) | Backend del tutor implementado; revisión y mejora de datos/modelo pendientes |
-| Antonio | [PROMPT.md](antonio/PROMPT.md) | Frontend mínimo implementado; mejora visual y navegación pendientes |
-| Marco | [PROMPT.md](marco/PROMPT.md) | Archivos y contratos listos; simuladores pendientes |
-| Nicol | [PROMPT.md](nicol/PROMPT.md) | Archivos y contratos listos; terminal y retos pendientes |
-| Edwin | [PROMPT.md](edwin/PROMPT.md) | Coordinación de integración, calidad y entrega pendiente |
-
+Cada uno trabaja en su rama (`feature/<nombre>-<parte>`), verifica sus cambios y abre un Pull Request a `main`. El flujo completo está en `../CONTRIBUTING.md`.

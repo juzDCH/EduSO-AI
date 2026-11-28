@@ -11,17 +11,18 @@ GIT ANTES DE TRABAJAR
 
 LO QUE YA EXISTE
 - app.py tiene Inicio, selección de cinco temas, exploración de contenido y Tutor IA; el flujo tema → pregunta del tutor está conectado.
-- El tutor se consume con ServicioTutor().responder(pregunta); la respuesta tiene a_dict().
+- El tutor se consume con ServicioTutor().responder(pregunta); la respuesta tiene a_dict(), un umbral de 0.35 y una respuesta de rechazo para temas fuera de alcance.
 - src/modules/catalog.py ofrece listar_modulos() con título, responsable, disponibilidad y descripción.
-- pages/ tiene una guía inicial. Marco y Nicol aún no han implementado sus módulos.
+- Marco y Nicol aún no han implementado sus módulos; hay 17 pruebas automáticas y documentación en docs/RUBRICA.md y docs/ARQUITECTURA.md.
 
 TU PARTE
 1. Mejorar diseño visual, jerarquía, legibilidad, adaptación a pantallas y navegación sin rehacer el backend ni quitar la elección de temas.
 2. Separar páginas si aporta claridad: Inicio, Tutor, Procesos, Memoria, Terminal y Retos.
 3. Mostrar módulos pendientes como “En desarrollo”; habilitar cada pantalla cuando el catálogo indique listo=True.
-4. Integrar errores de entrada y baja confianza con mensajes claros; conservar la respuesta de reformulación del tutor.
+4. Integrar errores de entrada y baja confianza con mensajes claros; conservar la respuesta de reformulación y el rechazo de temas fuera de alcance del tutor.
 5. Usar el catálogo para responsables/estado y los contratos del backend para datos. No duplicar clasificación, estados de proceso ni ejecución de comandos en la interfaz.
 6. Añadir instrucciones de uso o capturas solo si representan la app que realmente existe.
+7. Cuando Marco y Nicol entreguen, conectar sus APIs en páginas propias y verificar el recorrido completo. El bonus de interfaz web ya se cumple por usar Streamlit; documéntalo en docs/RUBRICA.md.
 
 ARCHIVOS PRINCIPALES
 app.py y pages/. Coordina con Marco/Nicol qué datos devuelven sus módulos y con Dante antes de cambiar el contrato del tutor.
