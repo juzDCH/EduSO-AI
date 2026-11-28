@@ -54,7 +54,7 @@ def main() -> None:
         print(f"Ejemplo: {respuesta.ejemplo}")
     if respuesta.pregunta_comprobacion:
         print(f"Comprueba lo aprendido: {respuesta.pregunta_comprobacion}")
-    if respuesta.requiere_reformular:
+    if respuesta.requiere_reformular and respuesta.intencion_sugerida:
         print("El tema sugerido fue: " + str(respuesta.intencion_sugerida))
 
 

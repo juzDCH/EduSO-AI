@@ -1,9 +1,9 @@
 {
-  "generado_utc": "2026-11-26T17:48:29.642816+00:00",
+  "generado_utc": "2026-11-28T04:02:21.228258+00:00",
   "dataset": "data\\dataset.csv",
-  "total_ejemplos": 100,
-  "ejemplos_entrenamiento": 80,
-  "ejemplos_prueba": 20,
+  "total_ejemplos": 360,
+  "ejemplos_entrenamiento": 288,
+  "ejemplos_prueba": 72,
   "semilla": 42,
   "proporcion_prueba": 0.2,
   "intenciones": [
@@ -11,64 +11,155 @@
     "comandos",
     "kernel",
     "memoria",
+    "otros",
     "procesos"
   ],
   "ejemplos_por_intencion": {
-    "archivos": 20,
-    "comandos": 20,
-    "kernel": 20,
-    "memoria": 20,
-    "procesos": 20
+    "archivos": 60,
+    "comandos": 60,
+    "kernel": 60,
+    "memoria": 60,
+    "otros": 60,
+    "procesos": 60
   },
-  "accuracy": 0.75,
-  "precision_macro": 0.8,
-  "recall_macro": 0.75,
-  "f1_macro": 0.7492063492063491,
+  "validacion_cruzada": {
+    "pliegues": 5,
+    "modelo": "tfidf_palabras_caracteres_lr",
+    "f1_macro_media": 0.8581141483315395,
+    "f1_macro_desviacion": 0.03931046667467475,
+    "accuracy_media": 0.8583333333333334
+  },
+  "comparacion_modelos": [
+    {
+      "modelo": "tfidf_palabras_caracteres_lr",
+      "f1_macro_media": 0.8581141483315395,
+      "f1_macro_desviacion": 0.03931046667467475,
+      "accuracy_media": 0.8583333333333334
+    },
+    {
+      "modelo": "tfidf_palabras_lr",
+      "f1_macro_media": 0.8180910946273265,
+      "f1_macro_desviacion": 0.03957064336164026,
+      "accuracy_media": 0.8194444444444444
+    }
+  ],
+  "modelo_elegido": "tfidf_palabras_caracteres_lr",
+  "accuracy": 0.7638888888888888,
+  "precision_macro": 0.7794719169719171,
+  "recall_macro": 0.763888888888889,
+  "f1_macro": 0.7628256928256928,
   "reporte_por_intencion": {
     "archivos": {
-      "precision": 0.8,
-      "recall": 1.0,
-      "f1-score": 0.8888888888888888,
-      "support": 4.0
+      "precision": 0.6923076923076923,
+      "recall": 0.75,
+      "f1-score": 0.72,
+      "support": 12.0
     },
     "comandos": {
       "precision": 1.0,
-      "recall": 0.5,
-      "f1-score": 0.6666666666666666,
-      "support": 4.0
+      "recall": 0.8333333333333334,
+      "f1-score": 0.9090909090909091,
+      "support": 12.0
     },
     "kernel": {
-      "precision": 0.6,
-      "recall": 0.75,
-      "f1-score": 0.6666666666666666,
-      "support": 4.0
+      "precision": 0.875,
+      "recall": 0.5833333333333334,
+      "f1-score": 0.7,
+      "support": 12.0
     },
     "memoria": {
-      "precision": 1.0,
-      "recall": 0.75,
-      "f1-score": 0.8571428571428571,
-      "support": 4.0
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.6666666666666666,
+      "support": 12.0
+    },
+    "otros": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1-score": 0.8888888888888888,
+      "support": 12.0
     },
     "procesos": {
-      "precision": 0.6,
+      "precision": 0.6428571428571429,
       "recall": 0.75,
-      "f1-score": 0.6666666666666666,
-      "support": 4.0
+      "f1-score": 0.6923076923076923,
+      "support": 12.0
     },
-    "accuracy": 0.75,
+    "accuracy": 0.7638888888888888,
     "macro avg": {
-      "precision": 0.8,
-      "recall": 0.75,
-      "f1-score": 0.7492063492063491,
-      "support": 20.0
+      "precision": 0.7794719169719171,
+      "recall": 0.763888888888889,
+      "f1-score": 0.7628256928256928,
+      "support": 72.0
     },
     "weighted avg": {
-      "precision": 0.8,
-      "recall": 0.75,
-      "f1-score": 0.7492063492063491,
-      "support": 20.0
+      "precision": 0.779471916971917,
+      "recall": 0.7638888888888888,
+      "f1-score": 0.7628256928256927,
+      "support": 72.0
     }
   },
+  "umbral": {
+    "candidatos": [
+      {
+        "umbral": 0.3,
+        "cobertura": 0.9333333333333333,
+        "acierto_entre_respondidas": 0.8928571428571429,
+        "aceptacion_fuera_de_tema": 0.043478260869565216
+      },
+      {
+        "umbral": 0.35,
+        "cobertura": 0.8866666666666667,
+        "acierto_entre_respondidas": 0.9210526315789473,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.4,
+        "cobertura": 0.8566666666666667,
+        "acierto_entre_respondidas": 0.9260700389105059,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.45,
+        "cobertura": 0.7966666666666666,
+        "acierto_entre_respondidas": 0.9372384937238494,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.5,
+        "cobertura": 0.7533333333333333,
+        "acierto_entre_respondidas": 0.9469026548672567,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.55,
+        "cobertura": 0.6933333333333334,
+        "acierto_entre_respondidas": 0.9615384615384616,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.6,
+        "cobertura": 0.6466666666666666,
+        "acierto_entre_respondidas": 0.9742268041237113,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.65,
+        "cobertura": 0.5966666666666667,
+        "acierto_entre_respondidas": 0.9720670391061452,
+        "aceptacion_fuera_de_tema": 0.0
+      },
+      {
+        "umbral": 0.7,
+        "cobertura": 0.5533333333333333,
+        "acierto_entre_respondidas": 0.9698795180722891,
+        "aceptacion_fuera_de_tema": 0.0
+      }
+    ],
+    "recomendado": 0.35,
+    "criterio": "Menor umbral con cobertura >= 85%, acierto entre respuestas >= 90% y aceptación de fuera de tema <= 10%.",
+    "sondas_fuera_de_tema": 23
+  },
   "modelo": "models\\modelo_nlp.joblib",
-  "nota": "Métricas calculadas sobre el conjunto de prueba separado; no son resultados de validación externa."
+  "nota": "Métricas de holdout y validación cruzada sobre el dataset propio; no son validación externa ni miden aprendizaje de estudiantes."
 }

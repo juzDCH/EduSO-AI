@@ -9,8 +9,9 @@ from src.knowledge_base import ContenidoEducativo, obtener_contenido
 from src.predictor import PredictorIntenciones
 
 
-UMBRAL_CONFIANZA_INICIAL = 0.30
+UMBRAL_CONFIANZA_INICIAL = 0.35
 LONGITUD_MAXIMA_PREGUNTA = 500
+INTENCION_RECHAZO = "otros"
 
 
 class PreguntaInvalidaError(ValueError):
@@ -60,6 +61,8 @@ class ServicioTutor:
         if not 0.0 <= confianza <= 1.0:
             raise ValueError("El predictor devolvió una confianza fuera del rango 0–1.")
 
+        if intencion_sugerida == INTENCION_RECHAZO:
+            return self._respuesta_fuera_de_tema(texto, confianza)
         contenido = obtener_contenido(intencion_sugerida)
         if contenido is None or confianza < self.umbral_confianza:
             return self._respuesta_de_reformulacion(
@@ -95,6 +98,26 @@ class ServicioTutor:
             ejemplo=contenido.ejemplo,
             pregunta_comprobacion=contenido.pregunta_comprobacion,
             requiere_reformular=False,
+        )
+
+    @staticmethod
+    def _respuesta_fuera_de_tema(pregunta: str, confianza: float) -> RespuestaTutor:
+        return RespuestaTutor(
+            pregunta=pregunta,
+            intencion=None,
+            intencion_sugerida=None,
+            confianza=confianza,
+            titulo="Ese tema todavía no está en mi base",
+            explicacion=(
+                "Por ahora te puedo ayudar con cinco temas de Sistemas Operativos: "
+                "procesos, memoria RAM, kernel, comandos de Linux y archivos. "
+                "Escribe una pregunta sobre alguno de ellos y la respondo con una "
+                "explicación, una analogía y un ejemplo."
+            ),
+            analogia="",
+            ejemplo="Por ejemplo: ¿qué es un proceso y qué estados puede tener?",
+            pregunta_comprobacion="",
+            requiere_reformular=True,
         )
 
     @staticmethod

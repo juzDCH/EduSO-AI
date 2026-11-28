@@ -1,6 +1,7 @@
-real,archivos,comandos,kernel,memoria,procesos
-archivos,4,0,0,0,0
-comandos,1,2,1,0,0
-kernel,0,0,3,0,1
-memoria,0,0,0,3,1
-procesos,0,0,1,0,3
+real,archivos,comandos,kernel,memoria,otros,procesos
+archivos,9,0,0,0,1,2
+comandos,1,10,0,1,0,0
+kernel,3,0,7,1,0,1
+memoria,0,0,1,8,1,2
+otros,0,0,0,0,12,0
+procesos,0,0,0,2,1,9
