@@ -16,7 +16,7 @@ Este documento deja alcance, archivos, contrato de integración y criterios de t
 
 **Archivos:** `app.py`, `pages/`.
 
-**Base entregada:** app Streamlit mínima con inicio, tutor, presentación de confianza y estado de cada módulo. El servicio del tutor se cachea para no cargar el modelo en cada interacción.
+**Base entregada:** app Streamlit con Inicio, elección de cinco temas, contenido con analogía/ejemplo, paso a pregunta del tutor, presentación de confianza y estado de módulos. El servicio del tutor se cachea para no cargar el modelo en cada interacción.
 
 **Pendiente:** mejorar identidad visual y diseño adaptable; separar páginas; añadir navegación a los simuladores y retos cuando estén listos; mostrar errores de entrada/modelo con mensajes útiles; no duplicar la lógica de Dante, Marco o Nicol dentro de Streamlit.
 
