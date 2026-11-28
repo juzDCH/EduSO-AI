@@ -19,7 +19,7 @@ Cada persona apoya la integración de su módulo. Edwin coordina la revisión fi
 ## Qué funciona ahora
 
 - **Tutor:** clasifica la intención con TF-IDF + Regresión Logística y entrega explicación, analogía, ejemplo y pregunta de comprobación desde una base editable.
-- **Frontend inicial:** `app.py` tiene una pantalla de tutor y muestra el estado de las secciones. Antonio puede reorganizar y mejorar el diseño sin cambiar la interfaz del servicio.
+- **Frontend inicial:** `app.py` permite elegir entre cinco temas, explorar una explicación con analogía y ejemplo, y pasar una pregunta de ejemplo al tutor. También muestra los otros módulos como próximos laboratorios.
 - **Módulos pendientes visibles:** procesos, memoria, terminal y retos aparecen como “En desarrollo” con responsable y descripción.
 - **Consola:** se puede probar el servicio antes de usar la interfaz.
 

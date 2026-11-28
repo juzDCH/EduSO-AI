@@ -10,38 +10,159 @@ from src.services.tutor import PreguntaInvalidaError, ServicioTutor
 
 st.set_page_config(page_title="EduSO AI", page_icon="🧠", layout="wide")
 
+TEMAS = ["procesos", "memoria", "kernel", "comandos", "archivos"]
+TITULOS_TEMA = {
+    "procesos": "Procesos",
+    "memoria": "Memoria RAM",
+    "kernel": "Kernel",
+    "comandos": "Comandos Linux",
+    "archivos": "Archivos y carpetas",
+}
+DESCRIPCIONES_TEMA = {
+    "procesos": "Descubre qué ocurre cuando abres una aplicación.",
+    "memoria": "Aprende cómo se usa y se libera la RAM.",
+    "kernel": "Conoce quién coordina el hardware y los programas.",
+    "comandos": "Practica instrucciones básicas de la terminal.",
+    "archivos": "Aprende a organizar archivos y carpetas.",
+}
+PREGUNTAS_EJEMPLO = {
+    "procesos": "¿Qué es un proceso?",
+    "memoria": "¿Para qué sirve la memoria RAM?",
+    "kernel": "¿Qué hace el kernel?",
+    "comandos": "¿Qué hace el comando pwd?",
+    "archivos": "¿Cómo creo una carpeta en Linux?",
+}
+
 
 @st.cache_resource
 def obtener_tutor() -> ServicioTutor:
     return ServicioTutor()
 
 
-def mostrar_inicio() -> None:
-    st.title("EduSO AI")
-    st.write("Entiende lo que sucede dentro de tu computadora.")
-    st.caption("Aprende Sistemas Operativos con explicaciones y experimentos guiados.")
+def abrir_tema(tema: str) -> None:
+    st.session_state["selector_tema"] = tema
+    st.session_state["tema_seleccionado"] = tema
+    st.session_state["navegacion"] = "Explorar temas"
 
-    st.subheader("Módulos del proyecto")
-    columnas = st.columns(2)
-    for indice, modulo in enumerate(listar_modulos()):
-        with columnas[indice % 2]:
-            estado = "Disponible" if modulo["listo"] else "En desarrollo"
-            st.info(
-                f"**{modulo['titulo']}** · {estado}\n\n"
-                f"Responsable: {modulo['responsable']}\n\n{modulo['resumen']}"
-            )
+
+def preguntar_sobre_tema(tema: str) -> None:
+    st.session_state["tema_seleccionado"] = tema
+    st.session_state["selector_tema"] = tema
+    st.session_state["pregunta_tutor"] = PREGUNTAS_EJEMPLO[tema]
+    st.session_state["navegacion"] = "Tutor IA"
+
+
+def mostrar_inicio() -> None:
+    st.title("¿Qué te gustaría entender hoy?")
+    st.write(
+        "Aprende Sistemas Operativos a tu ritmo. Elige un tema que te dé curiosidad "
+        "o escribe tu duda con tus propias palabras."
+    )
+
+    st.subheader("Elige un tema para empezar")
+    st.caption("Puedes empezar por lo que más te interese; no necesitas saber términos técnicos.")
+    columnas = st.columns(3)
+    for indice, tema in enumerate(TEMAS):
+        with columnas[indice % 3]:
+            with st.container(border=True):
+                st.markdown(f"### {TITULOS_TEMA[tema]}")
+                st.write(DESCRIPCIONES_TEMA[tema])
+                st.button(
+                    "Explorar tema",
+                    key=f"abrir_{tema}",
+                    on_click=abrir_tema,
+                    args=(tema,),
+                    use_container_width=True,
+                )
+
+    st.divider()
+    st.subheader("Así te ayuda el tutor")
+    pasos = st.columns(4)
+    for columna, numero, titulo, detalle in zip(
+        pasos,
+        ("1", "2", "3", "4"),
+        ("Pregunta", "Entiende", "Mira un ejemplo", "Comprueba"),
+        (
+            "Escribe la duda como te salga.",
+            "Recibe una explicación sencilla.",
+            "Conecta la idea con algo cotidiano.",
+            "Responde una pregunta breve para repasar.",
+        ),
+    ):
+        with columna:
+            st.markdown(f"**{numero}. {titulo}**")
+            st.caption(detalle)
+
+    pendientes = [modulo for modulo in listar_modulos() if not modulo["listo"]]
+    if pendientes:
+        with st.expander("Otros laboratorios que se están preparando"):
+            for modulo in pendientes:
+                st.markdown(f"**{modulo['titulo']}** — {modulo['resumen']}")
+
+
+def mostrar_tema() -> None:
+    st.title("Explora un tema")
+    tema_inicial = st.session_state.get("tema_seleccionado", TEMAS[0])
+    indice_inicial = TEMAS.index(tema_inicial) if tema_inicial in TEMAS else 0
+    tema = st.selectbox(
+        "¿Qué te interesa aprender?",
+        options=TEMAS,
+        index=indice_inicial,
+        format_func=lambda clave: TITULOS_TEMA[clave],
+        key="selector_tema",
+    )
+    st.session_state["tema_seleccionado"] = tema
+
+    contenido = obtener_tutor_contenido(tema)
+    st.subheader(contenido.titulo)
+    st.markdown("**La idea principal**")
+    st.write(contenido.explicacion)
+
+    izquierda, derecha = st.columns(2)
+    with izquierda:
+        st.markdown("**Una comparación sencilla**")
+        st.write(contenido.analogia)
+    with derecha:
+        st.markdown("**Un ejemplo**")
+        st.write(contenido.ejemplo)
+
+    st.info(f"**Comprueba lo que entendiste:** {contenido.pregunta_comprobacion}")
+    st.button(
+        "Preguntarle al tutor sobre este tema",
+        type="primary",
+        on_click=preguntar_sobre_tema,
+        args=(tema,),
+    )
+
+
+def obtener_tutor_contenido(tema: str):
+    from src.knowledge_base import obtener_contenido
+
+    contenido = obtener_contenido(tema)
+    if contenido is None:
+        raise ValueError(f"No hay contenido educativo registrado para: {tema}")
+    return contenido
 
 
 def mostrar_tutor() -> None:
-    st.title("Tutor de Sistemas Operativos")
-    st.write("Pregunta sobre procesos, memoria, kernel, comandos o archivos.")
+    st.title("Pregunta al tutor")
+    st.write(
+        "Escribe tu duda como se la preguntarías a un docente. El tutor identifica "
+        "el tema y te responde con una explicación sencilla, una analogía, un ejemplo "
+        "y una pregunta para repasar."
+    )
+    st.caption(
+        "Temas disponibles: procesos, memoria RAM, kernel, comandos Linux y archivos. "
+        "No necesitas escribir palabras técnicas."
+    )
 
     with st.form("formulario_tutor", clear_on_submit=False):
         pregunta = st.text_area(
-            "Tu pregunta",
-            placeholder="Ej.: ¿Qué pasa cuando abro un programa?",
+            "¿Qué te confunde o te da curiosidad?",
+            placeholder="Ej.: ¿Qué es un proceso?",
             max_chars=500,
             height=100,
+            key="pregunta_tutor",
         )
         enviar = st.form_submit_button("Consultar al tutor", type="primary")
 
@@ -84,12 +205,18 @@ def mostrar_tutor() -> None:
 def main() -> None:
     with st.sidebar:
         st.title("EduSO AI")
-        vista = st.radio("Navegación", ["Inicio", "Tutor IA"])
+        vista = st.radio(
+            "Navegación",
+            ["Inicio", "Explorar temas", "Tutor IA"],
+            key="navegacion",
+        )
         st.divider()
-        st.caption("Los simuladores y retos se habilitarán al completar sus módulos.")
+        st.caption("Aprende con una idea, una comparación y un ejemplo.")
 
     if vista == "Inicio":
         mostrar_inicio()
+    elif vista == "Explorar temas":
+        mostrar_tema()
     else:
         mostrar_tutor()
 

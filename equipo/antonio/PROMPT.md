@@ -10,13 +10,13 @@ GIT ANTES DE TRABAJAR
 4. Después de crear la rama, realiza las tareas de este prompt. No hagas commits en main. Al terminar, verifica tus cambios, agrega solo tus archivos, crea un commit, publica con git push -u origin feature/antonio-frontend y abre un Pull Request hacia main. Se integra a main después de revisión y sin errores.
 
 LO QUE YA EXISTE
-- app.py es una app Streamlit mínima con Inicio y Tutor IA.
+- app.py tiene Inicio, selección de cinco temas, exploración de contenido y Tutor IA; el flujo tema → pregunta del tutor está conectado.
 - El tutor se consume con ServicioTutor().responder(pregunta); la respuesta tiene a_dict().
 - src/modules/catalog.py ofrece listar_modulos() con título, responsable, disponibilidad y descripción.
 - pages/ tiene una guía inicial. Marco y Nicol aún no han implementado sus módulos.
 
 TU PARTE
-1. Mejorar diseño visual, jerarquía, legibilidad, adaptación a pantallas y navegación sin rehacer el backend.
+1. Mejorar diseño visual, jerarquía, legibilidad, adaptación a pantallas y navegación sin rehacer el backend ni quitar la elección de temas.
 2. Separar páginas si aporta claridad: Inicio, Tutor, Procesos, Memoria, Terminal y Retos.
 3. Mostrar módulos pendientes como “En desarrollo”; habilitar cada pantalla cuando el catálogo indique listo=True.
 4. Integrar errores de entrada y baja confianza con mensajes claros; conservar la respuesta de reformulación del tutor.
