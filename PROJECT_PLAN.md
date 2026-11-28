@@ -6,9 +6,9 @@ Este documento deja alcance, archivos, contrato de integración y criterios de t
 
 **Archivos:** `data/dataset.csv`, `src/preprocess.py`, `src/train.py`, `src/predictor.py`, `src/knowledge_base.py`, `src/services/tutor.py`.
 
-**Base entregada:** 100 preguntas balanceadas, limpieza reproducible, pipeline TF-IDF + Regresión Logística, evaluación holdout, artefacto del modelo, base de conocimiento con explicación/analogía/ejemplo, validación de entrada y respuesta serializable.
+**Base entregada:** 300 preguntas educativas balanceadas (60 por tema) + 60 ejemplos de rechazo; normalización reproducible; comparación de TF-IDF de palabras contra palabras + caracteres; Regresión Logística; validación cruzada de 5 pliegues y holdout 80/20; umbral 0.35 justificado con sondas externas; modelo, reportes, 17 pruebas automáticas y ficha en `docs/MODELO.md`.
 
-**Pendiente para dejarlo sólido:** revisar cada etiqueta con el contenido oficial de la materia; ampliar ejemplos variados por intención; comparar rendimiento por clase; calibrar el umbral con preguntas reales; anotar las unidades U1–U5 cuando el equipo tenga el programa.
+**Pendiente para dejarlo sólido:** revisar cada etiqueta con el contenido oficial de la materia; ampliar con preguntas reales de estudiantes; revisar confusiones (kernel/archivos, memoria/procesos); confirmar las unidades U1–U5 con el programa oficial y actualizar `docs/UNIDADES.md`.
 
 **Contrato para Antonio:** `ServicioTutor().responder(pregunta)` devuelve `RespuestaTutor`; llamar `respuesta.a_dict()` para obtener datos simples de mostrar. Errores de entrada se reportan como `PreguntaInvalidaError`. El entrenamiento se vuelve a generar con `python -m src.train`.
 
@@ -57,6 +57,23 @@ Este documento deja alcance, archivos, contrato de integración y criterios de t
 **Requisito académico:** pedir al equipo o docente el programa oficial U1–U5, mapear cada módulo a la unidad correcta y documentar la fuente. No adivinar ni afirmar correspondencias no confirmadas.
 
 **Criterio de terminado:** README permite preparar y ejecutar el proyecto siguiendo pasos reproducibles; la guía de demo refleja la app real; incidencias y resultados de validación tienen evidencia; no se inventan métricas, pruebas, testimonios ni cobertura curricular.
+
+**Documentos ya disponibles:** `docs/RUBRICA.md` (revisión de la rúbrica), `docs/MODELO.md` (ficha del modelo), `docs/ARQUITECTURA.md` (diagrama y contratos) y `docs/UNIDADES.md` (mapeo tentativo U1–U5). Faltan `INSTALACION.md`, `DEMOSTRACION.md` y `VALIDACION.md`.
+
+## Criterios de la rúbrica y responsables
+
+| Criterio | Pts | Dónde se cubre | Responsable |
+| --- | --- | --- | --- |
+| Enfoque didáctico | 20 | Tutor, base de conocimiento y validación | Dante + Edwin |
+| Integración de unidades | 20 | Simuladores, terminal y retos | Marco + Nicol (+ Antonio) |
+| Calidad del modelo | 15 | Dataset, entrenamiento y `docs/MODELO.md` | Dante |
+| Preprocesamiento y datos | 10 | `src/preprocess.py`, `data/` y reportes | Dante |
+| Interfaz de usuario | 15 (+5) | `app.py` y páginas | Antonio |
+| Exposición | 10 | Guion de demo (se prepara al final) | Edwin |
+| Código y repositorio | 5 | README, requirements, pruebas y PR | Todo el equipo |
+| Innovación y creatividad | 5 | Retos, visualizaciones y gamificación | Nicol + Marco |
+
+El detalle y la evidencia están en [`docs/RUBRICA.md`](docs/RUBRICA.md).
 
 ## Integración de equipo
 

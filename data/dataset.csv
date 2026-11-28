@@ -1,101 +1,301 @@
 pregunta,intencion
 ¿Qué es un proceso en un sistema operativo?,procesos
-¿Qué diferencia hay entre un programa y un proceso?,procesos
-¿Cuáles son los estados de un proceso?,procesos
-¿Qué significa que un proceso esté listo?,procesos
-¿Cuándo pasa un proceso al estado ejecutando?,procesos
-¿Por qué un proceso puede quedar esperando?,procesos
-¿Qué ocurre cuando un proceso termina?,procesos
+¿Cuál es la diferencia entre un programa y un proceso?,procesos
+¿Cuáles son los estados por los que pasa un proceso?,procesos
+¿Qué significa que un proceso esté en estado listo?,procesos
+¿Cuándo pasa un proceso al estado de ejecución?,procesos
+¿Por qué un proceso puede quedar en estado de espera?,procesos
+¿Qué ocurre cuando un proceso termina su ejecución?,procesos
 ¿Cómo crea el sistema operativo un proceso nuevo?,procesos
 ¿Qué información guarda el bloque de control de proceso?,procesos
 ¿Para qué sirve el PCB de un proceso?,procesos
 ¿Qué es un cambio de contexto entre procesos?,procesos
 ¿Por qué el procesador cambia de un proceso a otro?,procesos
 ¿Qué función cumple el planificador de procesos?,procesos
-¿Cómo se decide qué proceso usa la CPU?,procesos
-¿Qué pasa con el proceso cuando solicita una operación de entrada y salida?,procesos
-¿Un proceso puede tener varios hilos de ejecución?,procesos
-¿Qué recursos necesita un proceso para ejecutarse?,procesos
-¿Qué significa suspender un proceso?,procesos
-¿Cómo vuelve a listo un proceso que estaba esperando?,procesos
-¿Qué diferencia hay entre proceso activo y proceso bloqueado?,procesos
-¿Qué es la memoria RAM?,memoria
-¿Para qué sirve la memoria principal de una computadora?,memoria
-¿Qué guarda temporalmente la RAM mientras uso un programa?,memoria
-¿Qué pasa con los datos de la RAM cuando apago la computadora?,memoria
-¿Cómo asigna memoria el sistema operativo a un proceso?,memoria
-¿Qué significa liberar memoria?,memoria
-¿Cómo puedo calcular cuánta memoria queda disponible?,memoria
+¿Cómo decide el sistema operativo qué proceso usa la CPU?,procesos
+¿Qué es un proceso hijo y cómo se crea?,procesos
+¿Qué hace la llamada fork en Linux?,procesos
+¿Qué diferencia hay entre un proceso y un hilo?,procesos
+¿Comparten memoria dos procesos distintos?,procesos
+¿Qué es un proceso zombi?,procesos
+¿Por qué aparecen procesos zombis y cómo se eliminan?,procesos
+¿Qué es un proceso huérfano?,procesos
+¿Qué es el interbloqueo o deadlock?,procesos
+¿Qué condiciones pueden provocar un deadlock?,procesos
+¿Qué es la inanición de un proceso?,procesos
+¿Cómo evita el sistema operativo que un proceso acapare la CPU?,procesos
+¿Qué es un proceso en primer plano y uno en segundo plano?,procesos
+¿Qué significa ejecutar un programa en segundo plano en Linux?,procesos
+¿Cómo se representa el árbol de procesos en Linux?,procesos
+¿Qué es el proceso init o systemd?,procesos
+¿Qué pasa si un proceso intenta acceder a memoria que no le pertenece?,procesos
+¿Qué es el espacio de direcciones de un proceso?,procesos
+¿Qué contiene la pila de un proceso?,procesos
+¿Para qué sirve el contador de programa de un proceso?,procesos
+¿Qué son los registros del procesador durante la ejecución de un proceso?,procesos
+¿Por qué mi programa se queda esperando aunque la computadora no esté lenta?,procesos
+¿Qué pasa si cierro un programa a la fuerza?,procesos
+¿Cómo maneja el sistema operativo varios procesos al mismo tiempo si hay una sola CPU?,procesos
+¿Qué es la multitarea?,procesos
+¿Qué es la multiprogramación?,procesos
+¿Qué diferencia hay entre multitarea y multiprocesamiento?,procesos
+¿Qué es un proceso de usuario y uno del sistema?,procesos
+¿Por qué es importante aislar los procesos entre sí?,procesos
+¿Qué es la comunicación entre procesos?,procesos
+¿Para qué sirven las tuberías entre procesos?,procesos
+¿Qué es una señal enviada a un proceso?,procesos
+¿Cómo se termina un proceso que no responde?,procesos
+¿Qué es el identificador de proceso o PID?,procesos
+¿Puede un proceso crear otro proceso y cómo?,procesos
+¿Qué ocurre con los recursos de un proceso cuando termina?,procesos
+¿Qué es la planificación por turnos o round robin?,procesos
+¿Qué diferencia hay entre planificación apropiativa y no apropiativa?,procesos
+¿Qué es un proceso ligero?,procesos
+¿Por qué un proceso pasa de ejecución a listo?,procesos
+¿Qué es el estado nuevo de un proceso?,procesos
+¿Qué es el despacho de un proceso?,procesos
+¿Qué es la tabla de procesos del sistema operativo?,procesos
+¿Qué significa que dos procesos se ejecuten de forma concurrente?,procesos
+¿Qué es la exclusión mutua entre procesos?,procesos
+¿Qué es un semáforo en la comunicación de procesos?,procesos
+¿Qué pasa cuando un proceso solicita una operación de entrada y salida?,procesos
+¿Para qué sirve la memoria RAM?,memoria
+¿Qué es la memoria RAM y en qué se diferencia del disco?,memoria
+¿Por qué la RAM es volátil?,memoria
+¿Qué ocurre con los datos en RAM al apagar la computadora?,memoria
 ¿Qué es la memoria virtual?,memoria
-¿En qué se diferencian la RAM y el almacenamiento del disco?,memoria
+¿Para qué sirve la memoria virtual?,memoria
+¿Qué es la paginación?,memoria
 ¿Qué es una página de memoria?,memoria
-¿Para qué sirve la paginación de memoria?,memoria
-¿Qué significa que haya fragmentación en la memoria?,memoria
-¿Qué ocurre si los programas piden más RAM de la disponible?,memoria
-¿Qué es un marco de página?,memoria
-¿Cómo se divide la memoria en bloques?,memoria
-¿Qué significa memoria ocupada y memoria libre?,memoria
-¿Por qué una aplicación consume memoria RAM?,memoria
+¿Qué es un fallo de página?,memoria
+¿Qué ocurre cuando se produce un fallo de página?,memoria
+¿Qué es el intercambio o swapping?,memoria
+¿Por qué el sistema operativo mueve páginas al disco?,memoria
+¿Qué es la memoria secundaria?,memoria
+¿Qué diferencia hay entre RAM y ROM?,memoria
+¿Qué es la memoria caché?,memoria
+¿Por qué la caché es más rápida que la RAM?,memoria
+¿Qué es la jerarquía de memoria?,memoria
 ¿Qué es una dirección de memoria?,memoria
-¿Cómo evita el sistema que un proceso use memoria de otro?,memoria
-¿Qué relación existe entre memoria física y memoria virtual?,memoria
-¿Qué es el kernel?,kernel
-¿Qué otro nombre recibe el núcleo del sistema operativo?,kernel
-¿Cuál es la función principal del kernel?,kernel
-¿Cómo se comunica el kernel con el hardware?,kernel
-¿Qué componente administra los recursos de la computadora?,kernel
-¿El kernel controla el acceso a la CPU?,kernel
-¿Qué hace el núcleo cuando un programa solicita un servicio?,kernel
+¿Qué es la memoria física?,memoria
+¿Qué es el espacio de direcciones virtuales?,memoria
+¿Qué función cumple la MMU?,memoria
+¿Cómo traduce la MMU una dirección virtual a física?,memoria
+¿Qué es la tabla de páginas?,memoria
+¿Qué es la fragmentación interna?,memoria
+¿Qué es la fragmentación externa?,memoria
+¿En qué se diferencian la paginación y la segmentación?,memoria
+¿Qué es un segmento de memoria?,memoria
+¿Cómo asigna el sistema operativo memoria a un proceso?,memoria
+¿Cómo libera el sistema operativo la memoria de un proceso terminado?,memoria
+¿Qué es una fuga de memoria?,memoria
+¿Por qué una fuga de memoria puede ralentizar el equipo?,memoria
+¿Qué es el montón o heap de un proceso?,memoria
+¿Qué es la pila o stack de un proceso?,memoria
+¿Dónde se guardan las variables locales de una función?,memoria
+¿Qué es la memoria compartida entre procesos?,memoria
+¿Qué es la paginación por demanda?,memoria
+¿Qué es una política de reemplazo de páginas?,memoria
+¿Qué hace el algoritmo FIFO al reemplazar páginas?,memoria
+¿Qué es el algoritmo LRU de reemplazo de páginas?,memoria
+¿Qué es el thrashing o hiperpaginación?,memoria
+¿Por qué ocurre el thrashing?,memoria
+¿Qué es el espacio libre de memoria?,memoria
+¿Qué es la memoria ocupada por el núcleo?,memoria
+¿Por qué mi computadora se pone lenta cuando abro muchos programas?,memoria
+¿Qué hace el sistema operativo cuando la RAM se llena?,memoria
+¿Qué es la asignación contigua de memoria?,memoria
+¿Qué es la asignación dinámica de memoria?,memoria
+¿Qué ventaja tiene la memoria virtual para los programas?,memoria
+¿Puede un programa usar más memoria que la RAM instalada?,memoria
+¿Qué es el archivo de paginación en Windows?,memoria
+¿Qué es la swap en Linux?,memoria
+¿Qué es el bus de memoria?,memoria
+¿Qué es la latencia de acceso a memoria?,memoria
+¿Qué diferencia hay entre SRAM y DRAM?,memoria
+¿Qué es la memoria no volátil?,memoria
+¿Qué ocurre si el sistema se queda sin memoria libre?,memoria
+¿Por qué es importante cerrar programas que no se usan?,memoria
+¿Qué es el mapeo de memoria?,memoria
+¿Cómo protege el sistema operativo la memoria de un proceso?,memoria
+¿Qué es la memoria de solo lectura?,memoria
+¿Qué es el kernel de un sistema operativo?,kernel
+¿Cuáles son las funciones principales del kernel?,kernel
+¿Por qué el kernel es la parte central del sistema operativo?,kernel
 ¿Qué es una llamada al sistema?,kernel
-¿Cómo solicita una aplicación una operación al sistema operativo?,kernel
-¿Qué parte del sistema operativo administra los dispositivos?,kernel
-¿Quién controla el acceso a los periféricos?,kernel
-¿Qué función tiene el kernel en la gestión de memoria?,kernel
-¿El núcleo se ejecuta en modo privilegiado?,kernel
+¿Por qué un programa no puede acceder directamente al hardware?,kernel
 ¿Qué diferencia hay entre modo usuario y modo kernel?,kernel
-¿Qué protege el kernel frente a errores de las aplicaciones?,kernel
-¿Cómo interviene el kernel cuando ocurre una interrupción?,kernel
-¿Qué es un controlador de dispositivo y cómo se relaciona con el kernel?,kernel
-¿El kernel forma parte del sistema operativo?,kernel
-¿Qué papel cumple el núcleo al iniciar el sistema?,kernel
-¿Puede una aplicación acceder directamente a todo el hardware?,kernel
-¿Qué muestra el comando pwd en Linux?,comandos
-¿Para qué sirve ls en la terminal?,comandos
-¿Cómo veo los elementos del directorio actual?,comandos
-¿Qué comando muestra la ruta en la que estoy?,comandos
-¿Cómo cambio a otra carpeta usando la terminal?,comandos
-¿Qué hace el comando cd ..?,comandos
-¿Cómo regreso al directorio personal desde la consola?,comandos
-¿Qué opción de ls muestra archivos ocultos?,comandos
-¿Cómo limpio la pantalla de la terminal?,comandos
-¿Qué hace el comando whoami?,comandos
-¿Cómo consulto la fecha desde Linux?,comandos
-¿Qué comando permite ver el manual de otra instrucción?,comandos
-¿Para qué sirve man en Linux?,comandos
-¿Cómo puedo conocer el espacio disponible en disco desde la terminal?,comandos
-¿Qué comando muestra los procesos activos?,comandos
-¿Cómo consulto el historial de comandos?,comandos
-¿Qué hace la instrucción echo en la terminal?,comandos
-¿Cómo averiguo la versión del sistema Linux?,comandos
-¿Qué comando sirve para buscar texto en archivos?,comandos
-¿Cómo ejecuto una instrucción anterior de nuevo?,comandos
-¿Cómo creo una carpeta nueva en Linux?,archivos
-¿Qué comando crea un directorio?,archivos
-¿Cómo hago un archivo vacío desde la terminal?,archivos
-¿Qué hace touch cuando indico un nombre de archivo?,archivos
-¿Cómo copio un archivo a otra carpeta?,archivos
-¿Qué comando mueve un archivo a otro directorio?,archivos
-¿Cómo cambio el nombre de un archivo desde Linux?,archivos
-¿Cómo elimino un archivo usando la consola?,archivos
-¿Qué comando borra un directorio vacío?,archivos
-¿Cómo puedo eliminar una carpeta con su contenido?,archivos
-¿Cómo creo una carpeta llamada tareas desde la consola?,archivos
-¿Cómo copio una carpeta completa en Linux?,archivos
-¿Qué comando permite ver los permisos de un archivo?,archivos
-¿Cómo cambio los permisos de lectura de un archivo?,archivos
-¿Cómo cambio el propietario de un archivo?,archivos
-¿Qué instrucción sirve para comprimir archivos?,archivos
-¿Cómo extraigo el contenido de un archivo comprimido?,archivos
-¿Cómo guardo la salida de un comando en un archivo?,archivos
+¿Qué ocurre cuando un programa hace una llamada al sistema?,kernel
+¿Qué es una interrupción?,kernel
+¿Cómo maneja el kernel las interrupciones?,kernel
+¿Qué es un controlador de dispositivo o driver?,kernel
+¿Por qué el kernel necesita controladores?,kernel
+¿Qué es un kernel monolítico?,kernel
+¿Qué es un microkernel?,kernel
+¿Qué diferencia hay entre kernel monolítico y microkernel?,kernel
+¿Qué es un módulo del kernel en Linux?,kernel
+¿Se puede cargar un controlador sin reiniciar el equipo?,kernel
+¿Qué es el arranque o boot del sistema?,kernel
+¿Qué papel cumple el kernel durante el arranque?,kernel
+¿Qué es el gestor de arranque?,kernel
+¿Cómo administra el kernel la memoria del sistema?,kernel
+¿Cómo administra el kernel los dispositivos de entrada y salida?,kernel
+¿Qué es el sistema de archivos visto desde el kernel?,kernel
+¿Qué es una llamada al sistema para leer un archivo?,kernel
+¿Qué es el cambio de contexto que realiza el kernel?,kernel
+¿Qué es el temporizador del sistema y para qué lo usa el kernel?,kernel
+¿Qué es el espacio del kernel?,kernel
+¿Por qué un error en el kernel puede reiniciar el equipo?,kernel
+¿Qué es un volcado de memoria del kernel?,kernel
+¿Qué es el registro del sistema o log?,kernel
+¿Cómo informa el kernel de un error de hardware?,kernel
+¿Qué es la gestión de energía del kernel?,kernel
+¿Qué es un proceso en modo kernel?,kernel
+¿Qué es la comunicación entre el kernel y los programas?,kernel
+¿Qué es una interrupción de software?,kernel
+¿Qué es el planificador del kernel?,kernel
+¿Qué es la cola de procesos listos del kernel?,kernel
+¿Qué es la protección de memoria que implementa el kernel?,kernel
+¿Qué es el aislamiento entre procesos que garantiza el kernel?,kernel
+¿Qué es un servicio del sistema operativo?,kernel
+¿Qué diferencia hay entre el kernel y el shell?,kernel
+¿Qué diferencia hay entre el kernel y los programas de usuario?,kernel
+¿Qué es el núcleo híbrido de Windows?,kernel
+¿Qué es el kernel de Linux y quién lo mantiene?,kernel
+¿Qué es un parche de seguridad del kernel?,kernel
+¿Por qué se actualiza el kernel?,kernel
+¿Qué es una vulnerabilidad del kernel?,kernel
+¿Qué es el aislamiento de espacio de usuario?,kernel
+¿Qué es el gestor de dispositivos del kernel?,kernel
+¿Qué es el subsistema de entrada y salida?,kernel
+¿Qué es el búfer del kernel?,kernel
+¿Qué es la caché del kernel?,kernel
+¿Qué es un hilo del kernel?,kernel
+¿Qué es un proceso demonio o daemon?,kernel
+¿Qué es systemd en Linux?,kernel
+¿Cómo evita el kernel que un programa bloquee todo el sistema?,kernel
+¿Qué es la multitarea preventiva del kernel?,kernel
+¿Qué es el manejo de errores del kernel?,kernel
+¿Qué es el API del sistema operativo?,kernel
+¿Qué es POSIX?,kernel
+¿Qué significa que el kernel sea el intermediario entre hardware y software?,kernel
+¿Qué es un comando en Linux?,comandos
+¿Qué hace el comando pwd?,comandos
+¿Qué hace el comando ls?,comandos
+¿Qué diferencia hay entre ls y ls -l?,comandos
+¿Qué hace el comando cd?,comandos
+¿Cómo vuelvo al directorio anterior con cd?,comandos
+¿Qué hace el comando mkdir?,comandos
+¿Cómo creo varios directorios a la vez con mkdir?,comandos
+¿Qué hace el comando touch?,comandos
+¿Qué hace el comando rm?,comandos
+¿Cómo elimino un directorio y su contenido?,comandos
+¿Qué hace el comando cp?,comandos
+¿Cómo copio una carpeta completa?,comandos
+¿Qué hace el comando mv?,comandos
+¿Cómo renombro un archivo desde la terminal?,comandos
+¿Qué hace el comando cat?,comandos
+¿Qué hace el comando less?,comandos
+¿Qué hace el comando grep?,comandos
+¿Cómo busco una palabra dentro de un archivo?,comandos
+¿Qué hace el comando chmod?,comandos
+¿Cómo doy permisos de ejecución a un script?,comandos
+¿Qué significa chmod 755?,comandos
+¿Qué hace el comando chown?,comandos
+¿Qué hace el comando ps?,comandos
+¿Qué hace el comando top?,comandos
+¿Cómo termino un proceso desde la terminal?,comandos
+¿Qué hace el comando kill?,comandos
+¿Qué diferencia hay entre kill y kill -9?,comandos
+¿Qué hace el comando man?,comandos
+¿Cómo obtengo ayuda de un comando?,comandos
+¿Qué hace el comando echo?,comandos
+¿Cómo muestro el contenido de una variable de entorno?,comandos
+¿Qué hace el comando export?,comandos
+¿Qué hace el comando history?,comandos
+¿Qué hace el signo mayor que en la terminal?,comandos
+¿Qué hace el símbolo de tubería o pipe?,comandos
+¿Cómo combino dos comandos con una tubería?,comandos
+¿Qué hace el comando clear?,comandos
+¿Qué hace el comando sudo?,comandos
+¿Por qué se pide contraseña al usar sudo?,comandos
+¿Qué hace el comando apt en Ubuntu?,comandos
+¿Qué hace el comando df?,comandos
+¿Qué hace el comando du?,comandos
+¿Qué hace el comando find?,comandos
+¿Qué hace el comando tar?,comandos
+¿Cómo comprimo una carpeta en Linux?,comandos
+¿Qué hace el comando ssh?,comandos
+¿Qué hace el comando ping?,comandos
+¿Qué hace el comando curl?,comandos
+¿Qué hace el comando wget?,comandos
+¿Qué es un comando interno del shell?,comandos
+¿Qué es un alias en la terminal?,comandos
+¿Cómo creo un alias?,comandos
+¿Qué es el tabulador en la terminal?,comandos
+¿Qué hace Ctrl + C en la terminal?,comandos
+¿Qué es un script de shell?,comandos
+¿Cómo ejecuto un script de shell?,comandos
+¿Qué es una variable de entorno?,comandos
+¿Qué es el PATH del sistema?,comandos
+¿Para qué sirve la terminal si puedo usar el ratón?,comandos
+¿Qué es un archivo?,archivos
+¿Qué es un directorio?,archivos
+¿Qué diferencia hay entre un archivo y una carpeta?,archivos
+¿Qué es una ruta absoluta?,archivos
+¿Qué es una ruta relativa?,archivos
 ¿Qué diferencia hay entre una ruta absoluta y una relativa?,archivos
-¿Cómo organizo documentos dentro de carpetas en Linux?,archivos
+¿Qué es el directorio raíz en Linux?,archivos
+¿Qué es la carpeta home de un usuario?,archivos
+¿Qué es una extensión de archivo?,archivos
+¿Para qué sirve la extensión de un archivo?,archivos
+¿Qué es un archivo de texto?,archivos
+¿Qué es un archivo binario?,archivos
+¿Qué es el sistema de archivos?,archivos
+¿Qué es ext4?,archivos
+¿Qué es NTFS?,archivos
+¿Qué es FAT32?,archivos
+¿Qué diferencia hay entre ext4 y NTFS?,archivos
+¿Qué es un inodo?,archivos
+¿Qué información guarda un inodo?,archivos
+¿Qué es un enlace simbólico?,archivos
+¿Qué diferencia hay entre un enlace duro y uno simbólico?,archivos
+¿Qué es un archivo oculto en Linux?,archivos
+¿Cómo se representa un archivo oculto?,archivos
+¿Qué son los permisos de archivo?,archivos
+¿Qué significan los permisos de lectura escritura y ejecución?,archivos
+¿Qué es el propietario de un archivo?,archivos
+¿Qué es un grupo de usuarios?,archivos
+¿Qué es el árbol de directorios de Linux?,archivos
+¿Qué contiene el directorio etc?,archivos
+¿Qué contiene el directorio home?,archivos
+¿Qué contiene el directorio bin?,archivos
+¿Qué es un punto de montaje?,archivos
+¿Qué significa montar una unidad?,archivos
+¿Qué es una partición de disco?,archivos
+¿Qué es un sector de disco?,archivos
+¿Qué es un bloque de disco?,archivos
+¿Qué es la fragmentación de un archivo?,archivos
+¿Qué es un archivo temporal?,archivos
+¿Qué es la papelera de reciclaje?,archivos
+¿Se puede recuperar un archivo eliminado?,archivos
+¿Qué es una copia de seguridad?,archivos
+¿Qué diferencia hay entre copiar y mover un archivo?,archivos
+¿Qué es el nombre de un archivo?,archivos
+¿Qué caracteres no se recomiendan en un nombre de archivo?,archivos
+¿Qué es una carpeta comprimida?,archivos
+¿Qué es un archivo ZIP?,archivos
+¿Qué es un archivo ejecutable?,archivos
+¿Qué es el formato de un archivo?,archivos
+¿Qué es un archivo de configuración?,archivos
+¿Qué es una unidad de almacenamiento?,archivos
+¿Qué diferencia hay entre un disco duro y una memoria USB?,archivos
+¿Qué es un archivo de registro o log?,archivos
+¿Qué es la cuota de disco?,archivos
+¿Qué es un sistema de archivos en red?,archivos
+¿Qué es un archivo de solo lectura?,archivos
+¿Qué es el tamaño de un archivo?,archivos
+¿Qué es un directorio padre?,archivos
+¿Qué es el directorio actual?,archivos
+¿Qué es la estructura jerárquica de carpetas?,archivos
+¿Qué pasa si borro una carpeta importante?,archivos

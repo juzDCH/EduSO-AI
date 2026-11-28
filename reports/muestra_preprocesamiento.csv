@@ -1,11 +1,11 @@
 pregunta,intencion,texto_limpio
 ¿Qué es un proceso en un sistema operativo?,procesos,que es un proceso en un sistema operativo
-¿Qué diferencia hay entre un programa y un proceso?,procesos,que diferencia hay entre un programa y un proceso
-¿Cuáles son los estados de un proceso?,procesos,cuales son los estados de un proceso
-¿Qué significa que un proceso esté listo?,procesos,que significa que un proceso este listo
-¿Cuándo pasa un proceso al estado ejecutando?,procesos,cuando pasa un proceso al estado ejecutando
-¿Por qué un proceso puede quedar esperando?,procesos,por que un proceso puede quedar esperando
-¿Qué ocurre cuando un proceso termina?,procesos,que ocurre cuando un proceso termina
+¿Cuál es la diferencia entre un programa y un proceso?,procesos,cual es la diferencia entre un programa y un proceso
+¿Cuáles son los estados por los que pasa un proceso?,procesos,cuales son los estados por los que pasa un proceso
+¿Qué significa que un proceso esté en estado listo?,procesos,que significa que un proceso este en estado listo
+¿Cuándo pasa un proceso al estado de ejecución?,procesos,cuando pasa un proceso al estado de ejecucion
+¿Por qué un proceso puede quedar en estado de espera?,procesos,por que un proceso puede quedar en estado de espera
+¿Qué ocurre cuando un proceso termina su ejecución?,procesos,que ocurre cuando un proceso termina su ejecucion
 ¿Cómo crea el sistema operativo un proceso nuevo?,procesos,como crea el sistema operativo un proceso nuevo
 ¿Qué información guarda el bloque de control de proceso?,procesos,que informacion guarda el bloque de control de proceso
 ¿Para qué sirve el PCB de un proceso?,procesos,para que sirve el pcb de un proceso

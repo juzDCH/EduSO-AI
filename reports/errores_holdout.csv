@@ -1,0 +1,18 @@
+pregunta,intencion_real,intencion_predicha
+¿Qué ocurre cuando un programa hace una llamada al sistema?,kernel,procesos
+¿Qué es una interrupción de software?,kernel,archivos
+¿Qué información guarda un inodo?,archivos,procesos
+¿Qué pasa si borro una carpeta importante?,archivos,procesos
+¿Cómo asigna el sistema operativo memoria a un proceso?,memoria,procesos
+¿Qué es una llamada al sistema para leer un archivo?,kernel,archivos
+¿Qué es la papelera de reciclaje?,archivos,otros
+¿Por qué se pide contraseña al usar sudo?,comandos,memoria
+¿Qué diferencia hay entre ls y ls -l?,comandos,archivos
+¿Qué es el intercambio o swapping?,memoria,otros
+¿Qué es una interrupción?,kernel,archivos
+¿Qué es la protección de memoria que implementa el kernel?,kernel,memoria
+¿Comparten memoria dos procesos distintos?,procesos,memoria
+¿Qué es el espacio de direcciones virtuales?,memoria,kernel
+¿Por qué mi programa se queda esperando aunque la computadora no esté lenta?,procesos,memoria
+¿Qué es la multitarea?,procesos,otros
+¿Qué es la pila o stack de un proceso?,memoria,procesos
